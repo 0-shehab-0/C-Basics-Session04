@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C__Basics_Session04
@@ -48,18 +49,35 @@ namespace C__Basics_Session04
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with 
             //"Clean Code".
 
-            static void PrintBookTitle(string title)
-            {
-                Console.WriteLine("Book title: " + title);
-            }
+            //static void PrintBookTitle(string title)
+            //{
+            //    Console.WriteLine("Book title: " + title);
+            //}
 
 
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
 
 
             #endregion
 
+            #region Quistion 5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable 
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
 
+            static void AddBonusPages(int pages)
+            {
+                pages = pages + 50;
+            }
+
+            int pages = 400;
+
+            AddBonusPages(pages);
+
+            Console.WriteLine(pages);
+
+            //لان المتغير قيمته زي ما هي متغيرتش بتاخد نسخه للميثود مش بتغير القيمه الاصليه
+
+            #endregion
 
 
         }
