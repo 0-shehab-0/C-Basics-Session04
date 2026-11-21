@@ -149,31 +149,43 @@ namespace C__Basics_Session04
             //Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call
             //it once with only a title, and once passing both a title and pages.
 
-            static bool TryGetPrice(string title, out double price)
-            {
-                if (title == "Clean Code")
-                {
-                    price = 25.5;
-                    return true;
-                }
-                else
-                {
-                    price = 0;
-                    return false;
-                }
-            }
+            //static bool TryGetPrice(string title, out double price)
+            //{
+            //    if (title == "Clean Code")
+            //    {
+            //        price = 25.5;
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        price = 0;
+            //        return false;
+            //    }
+            //}
 
-            
-                if (TryGetPrice("Clean Code", out double price))
-                {
-                    Console.WriteLine(price);
-                }
-           
+
+            //    if (TryGetPrice("Clean Code", out double price))
+            //    {
+            //        Console.WriteLine(price);
+            //    }
+
 
             #endregion
 
+            #region Quistion 10
+            //Using the PrintBookInfo method from the question above, call it by naming the 
+            //parameters, passing pages before title.
 
+            static void PrintBookInfo(string title, int pages = 300)
+            {
+                Console.WriteLine("Book: " + title);
+                Console.WriteLine("Pages: " + pages);
+            }
 
+              PrintBookInfo(pages: 400, title: "Clean Code");
+            
+
+            #endregion
 
 
 
