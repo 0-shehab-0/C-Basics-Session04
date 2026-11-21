@@ -84,24 +84,39 @@ namespace C__Basics_Session04
             //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
             //see, and why? 
 
-            static void ApplyDiscount(double[] prices)
-            {
-                prices[0] = prices[0] - 5;
-            }
+            //static void ApplyDiscount(double[] prices)
+            //{
+            //    prices[0] = prices[0] - 5;
+            //}
 
-            
-                double[] prices = { 25.5, 40.0 };
 
-                ApplyDiscount(prices);
+            //    double[] prices = { 25.5, 40.0 };
 
-                Console.WriteLine(prices[0]);
-           
+            //    ApplyDiscount(prices);
+
+            //    Console.WriteLine(prices[0]);
+
             // beacuse array bassed by reference
 
             #endregion
 
+            #region Quistion 7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. 
+            //Call it and print pages afterward. How is the result different from question 5 ?
 
+            static void AddBonusPagesByRef(ref int pages)
+            {
+                pages = pages + 50;
+            }
 
+                int pages = 400;
+
+                AddBonusPagesByRef(ref pages);
+
+                Console.WriteLine(pages);
+            
+
+            #endregion
 
 
 
