@@ -64,20 +64,54 @@ namespace C__Basics_Session04
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable 
             //int pages = 400; and print pages afterward. What do you expect to see, and why?
 
-            static void AddBonusPages(int pages)
-            {
-                pages = pages + 50;
-            }
+            //static void AddBonusPages(int pages)
+            //{
+            //    pages = pages + 50;
+            //}
 
-            int pages = 400;
+            //int pages = 400;
 
-            AddBonusPages(pages);
+            //AddBonusPages(pages);
 
-            Console.WriteLine(pages);
+            //Console.WriteLine(pages);
 
             //لان المتغير قيمته زي ما هي متغيرتش بتاخد نسخه للميثود مش بتغير القيمه الاصليه
 
             #endregion
+
+            #region Quistion 6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it 
+            //with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+            //see, and why? 
+
+            static void ApplyDiscount(double[] prices)
+            {
+                prices[0] = prices[0] - 5;
+            }
+
+            
+                double[] prices = { 25.5, 40.0 };
+
+                ApplyDiscount(prices);
+
+                Console.WriteLine(prices[0]);
+           
+            // beacuse array bassed by reference
+
+            #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
